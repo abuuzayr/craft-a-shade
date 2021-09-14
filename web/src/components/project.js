@@ -32,7 +32,7 @@ export default function Project({ data }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-10">
             {data.project._rawImages && data.project._rawImages.map(i => {
                 const img = maybeIllustration(i)
-                return <a href="#" className="">
+                return <a href={i.image.asset.url} className="">
                   <img src={i.image.asset.url} alt={i.image.alt} className="w-full mx-auto rounded-3xl overflow-hidden object-cover h-32 lg:h-64" />
                 </a>
               })}
