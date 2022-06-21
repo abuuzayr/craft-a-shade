@@ -30,7 +30,12 @@ function ArticlePreview(props) {
       <div className="mt-2">
         <h3 className="text-xl font-bold">{props.title}</h3>
         {props._rawExcerpt && (
-          <div className="mt-2">
+          <div className="mt-2" style={{
+            display: "-webkit-box",
+            "-webkit-line-clamp": "3",
+            "-webkit-box-orient": "vertical",
+            overflow: "hidden"
+          }}>
             <PortableText blocks={props._rawExcerpt} />
           </div>
         )}
